@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Aula 01</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+
+        /* Forma utilizando jQuery */
+        $(document).ready(function () {
+            $("a").click(function () {
+                $("#titulo").css("color", "#cecece");
+            });
+        });
+
+        /* Forma convencional, utilizando js puro */
+        window.onload = function () {
+            document.getElementByTagName("a")[0].onclick = alterarTitulo;
+        }
+        function alterarTitulo() {
+            document.getElementById('titulo').style.color = '#cecece';
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 id="titulo">Hello World!</h1>
+    <a href="#">Executar Javascript </a>
+</body>
+
+</html>
